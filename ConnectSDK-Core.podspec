@@ -57,7 +57,8 @@ Pod::Spec.new do |s|
       'Devices/**/*.h',
       'Discovery/**/*.h',
       'Helpers/**/*.h',
-      'Services/**/*.h'
+      'Services/**/*.h',
+      'Frameworks/GCDWebServer/Core/GCDWebServer.h'
     ]
 
     sp.private_header_files = [
