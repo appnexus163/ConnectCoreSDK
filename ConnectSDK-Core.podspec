@@ -1,0 +1,61 @@
+Pod::Spec.new do |s|
+  s.name             = 'ConnectSDK-Core'
+  s.version          = '1.0.0'
+  s.summary          = 'Core classes for Connect SDK (iOS) providing device discovery and control for TVs and streaming devices.'
+  s.description      = <<-DESC
+The Connect SDK Core contains all of the core classes required for basic operation of Connect SDK.
+It includes support for several protocols such as Apple TV, DIAL, DLNA, LG Netcast, LG webOS, LG Cast, and Roku.
+Typically this repo is used as a submodule of the main Connect-SDK-iOS project, but it can also be integrated via CocoaPods.
+  DESC
+
+  s.homepage         = 'https://github.com/ConnectSDK/Connect-SDK-iOS-Core'
+  s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
+  s.author           = { 'LG Electronics' => 'connectsdk@lge.com' }
+
+  s.source           = { :git => 'https://github.com/ConnectSDK/Connect-SDK-iOS-Core.git', :tag => s.version.to_s }
+
+  s.ios.deployment_target = '9.0'
+
+  s.requires_arc     = true
+
+  s.source_files     = [
+    'ConnectSDK.h',
+    'Devices/**/*.{h,m}',
+    'Discovery/**/*.{h,m}',
+    'Helpers/**/*.{h,m}',
+    'Services/**/*.{h,m}'
+  ]
+
+  s.public_header_files = [
+    'ConnectSDK.h',
+    'Devices/**/*.h',
+    'Discovery/**/*.h',
+    'Helpers/**/*.h',
+    'Services/**/*.h'
+  ]
+
+  s.frameworks = [
+    'Foundation',
+    'SystemConfiguration',
+    'AVFoundation',
+    'MediaPlayer',
+    'CoreGraphics',
+    'CFNetwork'
+  ]
+
+  # Embedded third-party frameworks/binaries used by ConnectSDK-Core
+  s.vendored_frameworks = [
+    'Frameworks/asi-http-request/ASIHTTPRequest.framework',
+    'Frameworks/GCDWebServer/GCDWebServer.framework',
+    'Frameworks/LGCast/LGCast.framework',
+    'Frameworks/SocketRocket/SocketRocket.framework',
+    'Frameworks/XMLReader/XMLReader.framework',
+    'Frameworks/xswi/xswi.framework'
+  ]
+
+  s.pod_target_xcconfig = {
+    'CLANG_ENABLE_OBJC_ARC' => 'YES'
+  }
+end
+
+
