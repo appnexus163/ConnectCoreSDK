@@ -18,6 +18,8 @@ Typically this repo is used as a submodule of the main Connect-SDK-iOS project, 
 
   s.requires_arc     = true
 
+  s.prefix_header_file = 'ConnectSDK-Prefix.pch'
+
   s.source_files     = [
     'ConnectSDK.h',
     'Devices/**/*.{h,m}',
