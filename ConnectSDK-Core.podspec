@@ -23,7 +23,14 @@ Typically this repo is used as a submodule of the main Connect-SDK-iOS project, 
     'Devices/**/*.{h,m}',
     'Discovery/**/*.{h,m}',
     'Helpers/**/*.{h,m}',
-    'Services/**/*.{h,m}'
+    'Services/**/*.{h,m}',
+    'Frameworks/asi-http-request/Classes/**/*.{h,m}',
+    'Frameworks/asi-http-request/External/Reachability/**/*.{h,m}',
+    'Frameworks/GCDWebServer/**/*.{h,m}',
+    'Frameworks/objc-guid/**/*.{h,m}',
+    'Frameworks/SocketRocket/*.{h,m}',
+    'Frameworks/XMLReader/*.{h,m}',
+    'Frameworks/xswi/*.{h,m}'
   ]
 
   s.public_header_files = [
@@ -42,20 +49,6 @@ Typically this repo is used as a submodule of the main Connect-SDK-iOS project, 
     'CoreGraphics',
     'CFNetwork'
   ]
-
-  # Embedded third-party frameworks/binaries used by ConnectSDK-Core
-  s.vendored_frameworks = [
-    'Frameworks/asi-http-request/ASIHTTPRequest.framework',
-    'Frameworks/GCDWebServer/GCDWebServer.framework',
-    'Frameworks/LGCast/LGCast.framework',
-    'Frameworks/SocketRocket/SocketRocket.framework',
-    'Frameworks/XMLReader/XMLReader.framework',
-    'Frameworks/xswi/xswi.framework'
-  ]
-
-  s.pod_target_xcconfig = {
-    'CLANG_ENABLE_OBJC_ARC' => 'YES'
-  }
 end
 
 
