@@ -51,6 +51,12 @@ Typically this repo is used as a submodule of the main Connect-SDK-iOS project, 
     'CoreGraphics',
     'CFNetwork'
   ]
+
+  # Prebuilt LGCast streaming frameworks (Swift xcframeworks)
+  s.vendored_frameworks = [
+    'Frameworks/LGCast/LGCast.xcframework',
+    'Frameworks/LGCast/GStreamerForLGCast.xcframework'
+  ]
 end
 
 
